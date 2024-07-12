@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Literature Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="app">
+        <h1>Literature Quiz</h1>
+        <div class="timer" id="timer">Time Left: 10s</div>
+        <div class="quiz">
+            <h2 id="question">Question goes..</h2>
+            <div id="answer-buttons">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div>
+            <button id="next-btn">Next</button>
+        </div>
+    </div>
+    <script>
+        const questions=[
+    {
+        question: "Who wrote the novel 'Pride and Prejudice'",
+        answers:[
+            {text: "Charles Dickens", correct: false},
+            {text: "Jane Austen", correct: true},
+            {text: "Emily Bronte", correct: false},
+            {text: "F. Scott", correct: false}
+        ]
+    },
+    {
+        question: "What is the title of William Shakespeare's tragedy about two star-crossed lovers?",
+        answers:[
+            {text: "Macbeth", correct: false},
+            {text: "Romeo and Juliet", correct: true},
+            {text: "Hamlet", correct: false},
+            {text: "Othello",correct: false},
+        ]
+    },
+    {
+        question: "Which author wrote 'To Kill a Mockingbird'?",
+        answers:[
+            {text: "Harper Lee", correct: true},
+            {text: "J.K. Rowling", correct: false},
+            {text: "George Orwell", correct: false},
+            {text: "Ernest Heminway", correct: false}
+        ]
+    },
+    {
+        question: "In George Orwell's '1984' what phrase is used to describe a government's manipulation of facts?",
+        answers:[
+            {text: "Double Think", correct: false},
+            {text: "Newspeak", correct: true},
+            {text: "Thought Crime", correct: false},
+            {text: "Big Brother", correct: false}
+        ]
+    },
+    {
+        question: "What prestigious literary award is given annually for the best original novel written in the English language?",
+        answers:[
+            {text: "Pulitzer Prize", correct: false},
+            {text: "Noble Prize In literature", correct: false},
+            {text: "Booker Prize", correct: true},
+            {text: "National Book Award", correct: false}
+        ]
+    }
+];
+const questionElement = document.getElementById("question");
+const answerButtons = document.getElementById("answer-buttons");
+const nextButton = document.getElementById("next-btn");
+
+let currentQuestionIndex = 0;
+let score = 0;
+let timer;
+let timerExpired = false; 
+
+function startQuiz() {
+    currentQuestionIndex = 0;
+    score = 0;
+    nextButton.innerHTML = "Next";
+    showQuestion();
+}
+
+function showQuestion() {
+    resetstate();
+    let currentQuestion = questions[currentQuestionIndex];
+    let questionNo = currentQuestionIndex + 1;
+    questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+
+    const timerDisplay = document.getElementById("timer");
+    timerDisplay.textContent = "Time Left: 10s";
+
+    currentQuestion.answers.forEach((answer) => {
+        const button = document.createElement("button");
+        button.innerHTML = answer.text;
+        button.classList.add("btn");
+        answerButtons.appendChild(button);
+        if (answer.correct) {
+            button.dataset.correct = answer.correct;
+        }
+        button.addEventListener("click", selectAnswer);
+    });
+
+    let timeLeft = 10;
+    timer = setInterval(() => {
+        timeLeft--;
+        timerDisplay.textContent = "Time Left: " + timeLeft + "s";
+
+        if (timeLeft === 0) {
+            timerExpired = true;
+            selectAnswer({ target: null });
+        }
+    }, 1000);
+}
+
+
+
+function resetstate() {
+    nextButton.style.display = "none";
+    while (answerButtons.firstChild) {
+        answerButtons.removeChild(answerButtons.firstChild);
+    }
+    clearTimeout(timer);
+    timerExpired = false; 
+}
+
+function selectAnswer(e) {
+    clearTimeout(timer);
+
+    const selectedButton = e ? e.target : null;
+    const isCorrect = selectedButton && selectedButton.dataset.correct === "true";
+
+    if (isCorrect) {
+        selectedButton.classList.add("correct");
+        score++;
+    } else if (timerExpired) {
+    } else {
+        selectedButton.classList.add("incorrect");
+    }
+
+    Array.from(answerButtons.children).forEach((button) => {
+        if (button.dataset.correct === "true") {
+            button.classList.add("correct");
+        }
+        button.disabled = true;
+    });
+
+    nextButton.style.display = "block";
+}
+
+function showScore() {
+    resetstate();
+    if(score<=3){
+        questionElement.innerHTML = `Oops!!  You scored ${score} out of ${questions.length} marks. Better Luck Next Time`;   
+    }else{
+        questionElement.innerHTML = `Congratulations!! You scored ${score} out of ${questions.length} marks.`;
+    }
+
+    const timerDisplay = document.getElementById("timer");
+    timerDisplay.style.display = "none";
+
+    nextButton.innerHTML = "Play Again";
+    nextButton.style.display = "block";
+    setTimeout(()=>{
+        window.location.href="D:/FEE PROJECT/index.html";
+    }, 6000)
+}
+
+function handleNextButton() {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        showQuestion();
+    } else {
+        showScore();
+    }
+}
+
+nextButton.addEventListener("click", () => {
+    if (currentQuestionIndex < questions.length) {
+        handleNextButton();
+    } else {
+        startQuiz();
+    }
+});
+
+startQuiz();
+
+    </script>
+</body>
+</html>

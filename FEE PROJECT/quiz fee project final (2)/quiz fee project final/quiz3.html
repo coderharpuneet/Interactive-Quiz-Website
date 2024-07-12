@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="app">
+        <h1>History Quiz</h1>
+        <div class="timer" id="timer">Time Left: 10s</div>
+        <div class="quiz">
+            <h2 id="question">Question goes..</h2>
+            <div id="answer-buttons">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div>
+            <button id="next-btn">Next</button>
+        </div>
+    </div>
+    <script>
+        const questions=[
+    {
+        question: "What ancient civilization built the famous pyramids at Giza?",
+        answers:[
+            {text: "Roman Empire", correct: false},
+            {text: "Greek Civilization", correct: false},
+            {text: "Egyptian Civilization", correct: true},
+            {text: "Mesopotamian Empire", correct: false}
+        ]
+    },
+    {
+        question: "Which event marked the beginning of World War II in 1939",
+        answers:[
+            {text: "Attack on Pearl Harbour", correct: false},
+            {text: "Invasion of Poland", correct: true},
+            {text: "Battle of Stallingrad", correct: false},
+            {text: "D-Day Landing",correct: false},
+        ]
+    },
+    {
+        question: "Who is often referred to as the 'Father of the Renaissance'?",
+        answers:[
+            {text: "Leonardo da Vinci", correct: false},
+            {text: "Michelangelo", correct: false},
+            {text: "Galileo Galilei", correct: false},
+            {text: "Francesco Petrarch", correct: true}
+        ]
+    },
+    {
+        question: "Which document declared the thirteen American colonies independent from British rule in 1776?",
+        answers:[
+            {text: "Magna Carta", correct: false},
+            {text: "Declaration of Independence", correct: true},
+            {text: "Articles of Confederation", correct: false},
+            {text: "Bill of Rights", correct: false}
+        ]
+    },
+    {
+        question: "The Berlin Wall, a symbol of the Cold War, was built to divide which city?",
+        answers:[
+            {text: "Paris", correct: false},
+            {text: "London", correct: false},
+            {text: "Berlin", correct: true},
+            {text: "Moscow", correct: false}
+        ]
+    }
+];
+const questionElement = document.getElementById("question");
+const answerButtons = document.getElementById("answer-buttons");
+const nextButton = document.getElementById("next-btn");
+
+let currentQuestionIndex = 0;
+let score = 0;
+let timer;
+let timerExpired = false; 
+
+function startQuiz() {
+    currentQuestionIndex = 0;
+    score = 0;
+    nextButton.innerHTML = "Next";
+    showQuestion();
+}
+
+function showQuestion() {
+    resetstate();
+    let currentQuestion = questions[currentQuestionIndex];
+    let questionNo = currentQuestionIndex + 1;
+    questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+
+    const timerDisplay = document.getElementById("timer");
+    timerDisplay.textContent = "Time Left: 10s";
+
+    currentQuestion.answers.forEach((answer) => {
+        const button = document.createElement("button");
+        button.innerHTML = answer.text;
+        button.classList.add("btn");
+        answerButtons.appendChild(button);
+        if (answer.correct) {
+            button.dataset.correct = answer.correct;
+        }
+        button.addEventListener("click", selectAnswer);
+    });
+
+    let timeLeft = 10;
+    timer = setInterval(() => {
+        timeLeft--;
+        timerDisplay.textContent = "Time Left: " + timeLeft + "s";
+
+        if (timeLeft === 0) {
+            timerExpired = true;
+            selectAnswer({ target: null });
+        }
+    }, 1000);
+}
+
+
+
+function resetstate() {
+    nextButton.style.display = "none";
+    while (answerButtons.firstChild) {
+        answerButtons.removeChild(answerButtons.firstChild);
+    }
+    clearTimeout(timer);
+    timerExpired = false; 
+}
+
+function selectAnswer(e) {
+    clearTimeout(timer);
+
+    const selectedButton = e ? e.target : null;
+    const isCorrect = selectedButton && selectedButton.dataset.correct === "true";
+
+    if (isCorrect) {
+        selectedButton.classList.add("correct");
+        score++;
+    } else if (timerExpired) {
+    } else {
+        selectedButton.classList.add("incorrect");
+    }
+
+    Array.from(answerButtons.children).forEach((button) => {
+        if (button.dataset.correct === "true") {
+            button.classList.add("correct");
+        }
+        button.disabled = true;
+    });
+
+    nextButton.style.display = "block";
+}
+
+function showScore() {
+    resetstate();
+    if(score<=3){
+        questionElement.innerHTML = `Oops!!  You scored ${score} out of ${questions.length} marks. Better Luck Next Time`;   
+    }else{
+        questionElement.innerHTML = `Congratulations!! You scored ${score} out of ${questions.length} marks.`;
+    }
+
+    const timerDisplay = document.getElementById("timer");
+    timerDisplay.style.display = "none";
+
+    nextButton.innerHTML = "Exit";
+    nextButton.style.display = "block";
+}
+
+function handleNextButton() {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        showQuestion();
+    } else {
+        showScore();
+    }
+}
+
+nextButton.addEventListener("click", () => {
+    if (currentQuestionIndex < questions.length) {
+        handleNextButton();
+    } else {
+        startQuiz();
+    }
+});
+
+startQuiz();
+
+    </script>
+</body>
+</html>

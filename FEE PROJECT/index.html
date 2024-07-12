@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>www.Quizzy.com</title>
+
+  <link rel="icon" href="quizzy-icon.png" type="image/icon type">
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500&family=Vina+Sans&display=swap');
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500&display=swap');
+  </style>
+</head>
+
+<body>
+  <!-- MODALLLLLSSSS -->
+  <div class="modal" id="myModal1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Rules Before Starting the quiz</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <ul>
+              <li>You get 25 seconds to answer each question; watch the timer at the top.</li>
+              <li> 5 points for the correct answer; up to 5 additional points as speed bonus if you answer quickly</li>
+              <li>There is no negative marking for wrong answer</li>
+          </ul>
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          <a href="Quizfeeproject/quiz1.html"><button type="button" class="btn btn-danger" data-bs-dismiss="modal">Start Now</button></a>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="myModal2">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Rules Before Starting the quiz</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <ul>
+              <li>You get 25 seconds to answer each question; watch the timer at the top.</li>
+              <li> 5 points for the correct answer; up to 5 additional points as speed bonus if you answer quickly</li>
+              <li>There is no negative marking for wrong answer</li>
+          </ul>
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          <a href="Quizfeeproject/quiz2.html"><button type="button" class="btn btn-danger" data-bs-dismiss="modal">Start Now</button></a>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="myModal3">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Rules Before Starting the quiz</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <ul>
+              <li>You get 25 seconds to answer each question; watch the timer at the top.</li>
+              <li> 5 points for the correct answer; up to 5 additional points as speed bonus if you answer quickly</li>
+              <li>There is no negative marking for wrong answer</li>
+          </ul>
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          <a href="Quizfeeproject/quiz3.html"><button type="button" class="btn btn-danger" data-bs-dismiss="modal">Start Now</button></a>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="myModal4">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Rules Before Starting the quiz</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <ul>
+              <li>You get 25 seconds to answer each question; watch the timer at the top.</li>
+              <li> 5 points for the correct answer; up to 5 additional points as speed bonus if you answer quickly</li>
+              <li>There is no negative marking for wrong answer</li>
+          </ul>
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          <a href="Quizfeeproject/quiz4.html"><button type="button" class="btn btn-danger" data-bs-dismiss="modal">Start Now</button></a>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="myModal5">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Rules Before Starting the quiz</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <ul>
+              <li>You get 25 seconds to answer each question; watch the timer at the top.</li>
+              <li> 5 points for the correct answer; up to 5 additional points as speed bonus if you answer quickly</li>
+              <li>There is no negative marking for wrong answer</li>
+          </ul>
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          <a href="Quizfeeproject/quiz5.html"><button type="button" class="btn btn-danger" data-bs-dismiss="modal">Start Now</button></a>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="myModal6">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Rules Before Starting the quiz</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <ul>
+              <li>You get 25 seconds to answer each question; watch the timer at the top.</li>
+              <li> 5 points for the correct answer; up to 5 additional points as speed bonus if you answer quickly</li>
+              <li>There is no negative marking for wrong answer</li>
+          </ul>
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          <a href="Quizfeeproject/quiz6.html"><button type="button" class="btn btn-danger" data-bs-dismiss="modal">Start Now</button></a>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="myModal7">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Rules Before Starting the quiz</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <ul>
+              <li>You get 25 seconds to answer each question; watch the timer at the top.</li>
+              <li> 5 points for the correct answer; up to 5 additional points as speed bonus if you answer quickly</li>
+              <li>There is no negative marking for wrong answer</li>
+          </ul>
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          <a href="Quizfeeproject/quiz7.html"><button type="button" class="btn btn-danger" data-bs-dismiss="modal">Start Now</button></a>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="myModal8">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Rules Before Starting the quiz</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <ul>
+              <li>You get 25 seconds to answer each question; watch the timer at the top.</li>
+              <li> 5 points for the correct answer; up to 5 additional points as speed bonus if you answer quickly</li>
+              <li>There is no negative marking for wrong answer</li>
+          </ul>
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          <a href="Quizfeeproject/quiz8.html"><button type="button" class="btn btn-danger" data-bs-dismiss="modal">Start Now</button></a>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="myModal9">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Rules Before Starting the quiz</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <ul>
+              <li>You get 25 seconds to answer each question; watch the timer at the top.</li>
+              <li> 5 points for the correct answer; up to 5 additional points as speed bonus if you answer quickly</li>
+              <li>There is no negative marking for wrong answer</li>
+          </ul>
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          <a href="Quizfeeproject/quiz9.html"><button type="button" class="btn btn-danger" data-bs-dismiss="modal">Start Now</button></a>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="myModal10">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Rules Before Starting the quiz</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <ul>
+              <li>You get 25 seconds to answer each question; watch the timer at the top.</li>
+              <li> 5 points for the correct answer; up to 5 additional points as speed bonus if you answer quickly</li>
+              <li>There is no negative marking for wrong answer</li>
+          </ul>
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          <a href="Quizfeeproject/quiz10.html"><button type="button" class="btn btn-danger" data-bs-dismiss="modal">Start Now</button></a>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="myModal11">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Rules Before Starting the quiz</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <ul>
+              <li>You get 25 seconds to answer each question; watch the timer at the top.</li>
+              <li> 5 points for the correct answer; up to 5 additional points as speed bonus if you answer quickly</li>
+              <li>There is no negative marking for wrong answer</li>
+          </ul>
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          <a href="Quizfeeproject/quiz11.html"><button type="button" class="btn btn-danger" data-bs-dismiss="modal">Start Now</button></a>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="myModal12">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Rules Before Starting the quiz</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <ul>
+              <li>You get 25 seconds to answer each question; watch the timer at the top.</li>
+              <li> 5 points for the correct answer; up to 5 additional points as speed bonus if you answer quickly</li>
+              <li>There is no negative marking for wrong answer</li>
+          </ul>
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          <a href="Quizfeeproject/quiz12.html"><button type="button" class="btn btn-danger" data-bs-dismiss="modal">Start Now</button></a>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="myModal13">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Rules Before Starting the quiz</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <ul>
+              <li>You get 25 seconds to answer each question; watch the timer at the top.</li>
+              <li> 5 points for the correct answer; up to 5 additional points as speed bonus if you answer quickly</li>
+              <li>There is no negative marking for wrong answer</li>
+          </ul>
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          <a href="Quizfeeproject/quiz13.html"><button type="button" class="btn btn-danger" data-bs-dismiss="modal">Start Now</button></a>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="myModal14">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Rules Before Starting the quiz</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <ul>
+              <li>You get 25 seconds to answer each question; watch the timer at the top.</li>
+              <li> 5 points for the correct answer; up to 5 additional points as speed bonus if you answer quickly</li>
+              <li>There is no negative marking for wrong answer</li>
+          </ul>
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          <a href="Quizfeeproject/quiz14.html"><button type="button" class="btn btn-danger" data-bs-dismiss="modal">Start Now</button></a>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="myModal15">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Rules Before Starting the quiz</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <ul>
+              <li>You get 25 seconds to answer each question; watch the timer at the top.</li>
+              <li> 5 points for the correct answer; up to 5 additional points as speed bonus if you answer quickly</li>
+              <li>There is no negative marking for wrong answer</li>
+          </ul>
+        </div>
+  
+
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          <a href="Quizfeeproject/quiz15.html"><button type="button" class="btn btn-danger" data-bs-dismiss="modal">Start Now</button></a>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="myModal16">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Rules Before Starting the quiz</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <ul>
+              <li>You get 25 seconds to answer each question; watch the timer at the top.</li>
+              <li> 5 points for the correct answer; up to 5 additional points as speed bonus if you answer quickly</li>
+              <li>There is no negative marking for wrong answer</li>
+          </ul>
+        </div>
+  
+
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          <a href="Quizfeeproject/quiz16.html"><button type="button" class="btn btn-danger" data-bs-dismiss="modal">Start Now</button></a>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="myModal17">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Rules Before Starting the quiz</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <ul>
+              <li>You get 25 seconds to answer each question; watch the timer at the top.</li>
+              <li> 5 points for the correct answer; up to 5 additional points as speed bonus if you answer quickly</li>
+              <li>There is no negative marking for wrong answer</li>
+          </ul>
+        </div>
+  
+
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          <a href="Quizfeeproject/quiz17.html"><button type="button" class="btn btn-danger" data-bs-dismiss="modal">Start Now</button></a>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="myModal18">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Rules Before Starting the quiz</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <ul>
+              <li>You get 25 seconds to answer each question; watch the timer at the top.</li>
+              <li> 5 points for the correct answer; up to 5 additional points as speed bonus if you answer quickly</li>
+              <li>There is no negative marking for wrong answer</li>
+          </ul>
+        </div>
+  
+
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          <a href="Quizfeeproject/quiz18.html"><button type="button" class="btn btn-danger" data-bs-dismiss="modal">Start Now</button></a>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+<!-- MODALLLLLL ENDSSS -->
+
+
+
+  <header class="header">
+    <!-- <a href="#section1" class="logo">QUIZZY.com</a>
+    <i class='bx bx-menu' id="menu-icon"></i>
+    <nav class="navbar">
+      
+      <div class="dropdown">
+       
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Categories
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#section2">Latest Quizes</a></li>
+          <li><a class="dropdown-item" href="#section-03">Trending Quizes</a></li>
+         
+        </ul>
+      </div>
+      
+     
+      <i class='bx bx-play-circle bx-md bx-flashing'></i>
+      <a class="two" href="#section2">Play now<a>
+
+        
+
+          <i class='bx bxs-contact '></i>
+          <a href="contact.html">Contact us</a>
+          <i class='bx bxs-face bx-md'></i>
+          <a href="#about">About us<a></a>
+
+            <a href="login-1.html"> <button class="log-btn">Log In</button></a>
+    </nav> -->
+
+<nav class="navbar">
+
+  
+  
+  <a href="" class="nav-branding">QUIZZY.com</a>
+  
+ 
+  <ul class="nav-menu">
+    <li class="nav-item">
+      
+      <div class="dropdown">
+         
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Categories
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#section2">Latest Quizes</a></li>
+          <li><a class="dropdown-item" href="#section-03">Trending Quizes</a></li>
+         
+        </ul>
+      </div>
+      
+    </li>
+    <li class="nav-item">
+      
+      <a href="#section2" class="nav-link">Play Now</a>
+      
+      
+    </li>
+    
+    <li class="nav-item">
+      <a href="#about" class="nav-link">About Us</a>
+    </li>
+    <li class="nav-item">
+      <a href="contact.html" class="nav-link">Contact Us</a>
+    </li>
+    <li class="nav-item">
+      <a class="btn-login" href="login-1.html"> <button class="log-btn">Log In</button></a>
+    </li>
+
+  </ul>
+  <div class="hamburger">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+</nav>
+    
+<script src="script.js" ></script>
+
+  </header>
+ 
+
+  <main>
+    <section class="first" id="section1">
+      <div class="back-img">
+        <img src="images/back.svg" alt="" />
+      </div>
+      <div class="intro">
+        <h1>Welcome To Quizzy</h1>
+        <p>
+          "Unlock the world of knowledge and fun at
+          <span class="intro-main">Quizzy.com</span> ... Where Learning Meets Entertainment!"
+        </p>
+      </div>
+    </section>
+    
+    <section class="about-us" id="about">
+      <div class="about-section">
+        <div class="inner-container">
+          <h1>About Us</h1>
+          <p class="text">
+            We've got all the quizzes you love to binge! Come on in and hunker down for the long haul.Motivate every
+            student to mastery with easy-to-customize content plus tools for inclusive assessment, instruction, and
+            practice.Try our latest quizes for free only on Quizzy.com..
+          </p>
+          <div class="skills">
+            <p class="one">Interactive Quiz</p>
+            <p class="two">Travia</p>
+            <p class="three">Learning</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- slider-area -->
+    <!-- <div class="slider-area">
+      <p> Our Clients</p>
+      <div class="wrapper">
+        <div class="item"><img alt="" src="images/Campion-College-School-Logo-Design-1024x791.webp"></div>
+        <div class="item"><img alt="" src="images/Chitkara-b_d.webp"></div>
+        <div class="item"><img alt="" src="images/2ca71f10767fe2509400a4474db3a688.jpg"></div>
+        <div class="item"><img alt="" src="images/Thapar-University-2.jpg"></div>
+        <div class="item"><img alt="" src="images/maxresdefault.jpg"></div>
+      </div>
+      
+    </div> --> 
+
+    <section class="clients">
+     
+      <h5> Our Clients</h5>
+    <div class="logoss">
+      <div class="logoss-slide">
+        <img src="images/Campion-College-School-Logo-Design-1024x791.webp"/>
+        <img src="images/Chitkara-b_d.webp"/>
+        <img src="images/2ca71f10767fe2509400a4474db3a688.jpg" />
+        <img src="images/Thapar-University-2.jpg" />
+        <img src="images/maxresdefault.jpg"/>
+      
+      </div>
+      <div class="logoss-slide">
+        <img src="images/Campion-College-School-Logo-Design-1024x791.webp"/>
+        <img src="images/Chitkara-b_d.webp"/>
+        <img src="images/2ca71f10767fe2509400a4474db3a688.jpg" />
+        <img src="images/Thapar-University-2.jpg" />
+        <img src="images/maxresdefault.jpg"/>
+      
+      </div>
+    </div>
+    </section>
+    <!-- slider-area ends -->
+    <section class="second" id="section2">
+      <div class="aboutt">
+        <h1><span>L</span>atest Quizes...</h1>
+      </div>
+      <div class="quizes">
+        <div class="quiz">
+          <h1>Cricket Quiz</h1>
+          <div>
+            <img src="images/crick1.jpg" alt="" />
+          </div>
+          <p>
+            Take this Sports and Recreation quiz only at Quizzy.com to test your knowledge about the sport of
+            cricket. MCQs related to Cricket.
+          </p>
+          <div class="btn">
+            
+            <!-- <button ><i class='bx bxs-caret-right-circle '></i><a href="modal-pop.html">Play now</a></button> -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal1" ><i class='bx bxs-caret-right-circle '></i>Play now</a></button>
+
+            <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 22H13C17.9706 22 22 17.9706 22 13C22 8.02944 17.9706 4 13 4C8.36745 4 4.49744 7.50005 4 12"
+                  stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                <path d="M18.5 5.5L20 4M6 4L7.5 5.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                <path
+                  d="M16.5 9L13.5607 11.9393M13.5607 11.9393C13.2892 11.6679 12.9142 11.5 12.5 11.5C11.6716 11.5 11 12.1716 11 13C11 13.8284 11.6716 14.5 12.5 14.5C13.3284 14.5 14 13.8284 14 13C14 12.5858 13.8321 12.2108 13.5607 11.9393Z"
+                  stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                <path d="M12.5 3.5V2M9.5 2H15.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                <path d="M2 15H5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                <path d="M2 18.5H7" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+              </svg>
+              15 min</span>
+          </div>
+        </div>
+        <div class="quiz">
+          <h1>G.K Quiz</h1>
+          <div>
+            <img src="images/gk_quiz-sixteen_nine.webp" alt="" />
+          </div>
+          <p>
+            General Knowledge Online Quiz - Following quiz provides Multiple Choice Questions (MCQs) related to General
+            Knowledge.
+          </p>
+          <div class="btn">
+
+            <!-- <button> <i class='bx bxs-caret-right-circle'></i><a href="Quizfeeproject/quiz2q1.html">Play
+                now</a></button> -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal2" ><i class='bx bxs-caret-right-circle '></i>Play now</a></button>
+            <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 22H13C17.9706 22 22 17.9706 22 13C22 8.02944 17.9706 4 13 4C8.36745 4 4.49744 7.50005 4 12"
+                  stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                <path d="M18.5 5.5L20 4M6 4L7.5 5.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                <path
+                  d="M16.5 9L13.5607 11.9393M13.5607 11.9393C13.2892 11.6679 12.9142 11.5 12.5 11.5C11.6716 11.5 11 12.1716 11 13C11 13.8284 11.6716 14.5 12.5 14.5C13.3284 14.5 14 13.8284 14 13C14 12.5858 13.8321 12.2108 13.5607 11.9393Z"
+                  stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                <path d="M12.5 3.5V2M9.5 2H15.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                <path d="M2 15H5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                <path d="M2 18.5H7" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+              </svg>
+              10 min</span>
+          </div>
+        </div>
+        <div class="quiz">
+          <h1>History Quiz</h1>
+          <div>
+            <img src="images/1523253133.png" alt="" />
+          </div>
+          <p>
+            Take this World History quiz at Encyclopedia Britannica to test your knowledge of everything about history.
+          </p>
+          <div class="btn">
+            <!-- <button><i class='bx bxs-caret-right-circle'></i><a href="Quizfeeproject/quiz3q1.html">Play now</a></button> -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal3" ><i class='bx bxs-caret-right-circle '></i>Play now</a></button>
+            <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 22H13C17.9706 22 22 17.9706 22 13C22 8.02944 17.9706 4 13 4C8.36745 4 4.49744 7.50005 4 12"
+                  stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                <path d="M18.5 5.5L20 4M6 4L7.5 5.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                <path
+                  d="M16.5 9L13.5607 11.9393M13.5607 11.9393C13.2892 11.6679 12.9142 11.5 12.5 11.5C11.6716 11.5 11 12.1716 11 13C11 13.8284 11.6716 14.5 12.5 14.5C13.3284 14.5 14 13.8284 14 13C14 12.5858 13.8321 12.2108 13.5607 11.9393Z"
+                  stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                <path d="M12.5 3.5V2M9.5 2H15.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                <path d="M2 15H5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                <path d="M2 18.5H7" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+              </svg>
+              20 min</span>
+          </div>
+        </div>
+        <div class="quiz">
+          <h1>Science Quiz</h1>
+          <div>
+            <img src="images/1609908512.jpg" alt="" />
+          </div>
+          <p>
+            You don't need a physics PhD for these questions - though it would certainly help with our science quiz
+            questions . Take this quiz at Quizzy.com to test your knowledge about science.
+          </p>
+          <div class="btn">
+            <!-- <button><i class='bx bxs-caret-right-circle'></i><a href="Quizfeeproject/quiz4q1.html">Play now</a></button> -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal4" ><i class='bx bxs-caret-right-circle '></i>Play now</a></button>
+            <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 22H13C17.9706 22 22 17.9706 22 13C22 8.02944 17.9706 4 13 4C8.36745 4 4.49744 7.50005 4 12"
+                  stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                <path d="M18.5 5.5L20 4M6 4L7.5 5.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                <path
+                  d="M16.5 9L13.5607 11.9393M13.5607 11.9393C13.2892 11.6679 12.9142 11.5 12.5 11.5C11.6716 11.5 11 12.1716 11 13C11 13.8284 11.6716 14.5 12.5 14.5C13.3284 14.5 14 13.8284 14 13C14 12.5858 13.8321 12.2108 13.5607 11.9393Z"
+                  stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                <path d="M12.5 3.5V2M9.5 2H15.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                <path d="M2 15H5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                <path d="M2 18.5H7" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+              </svg>
+              20 min</span>
+          </div>
+        </div>
+        <div class="quiz">
+          <h1>C.S Quiz</h1>
+          <div>
+            <img src="images/cs.jpeg" alt="" />
+          </div>
+          <p>
+            Basics of Computer Science Online Quiz - Following quiz provides Multiple Choice Questions (MCQs) related to
+            Basics of Computer Science.Take this quiz at Quizzy.com to test your knowledge about science.
+          </p>
+          <div class="btn">
+            <!-- <button><i class='bx bxs-caret-right-circle'></i><a href="Quizfeeproject/quiz5q1.html">Play now</a></button> -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal5" ><i class='bx bxs-caret-right-circle '></i>Play now</a></button>
+            <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 22H13C17.9706 22 22 17.9706 22 13C22 8.02944 17.9706 4 13 4C8.36745 4 4.49744 7.50005 4 12"
+                  stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                <path d="M18.5 5.5L20 4M6 4L7.5 5.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                <path
+                  d="M16.5 9L13.5607 11.9393M13.5607 11.9393C13.2892 11.6679 12.9142 11.5 12.5 11.5C11.6716 11.5 11 12.1716 11 13C11 13.8284 11.6716 14.5 12.5 14.5C13.3284 14.5 14 13.8284 14 13C14 12.5858 13.8321 12.2108 13.5607 11.9393Z"
+                  stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                <path d="M12.5 3.5V2M9.5 2H15.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                <path d="M2 15H5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                <path d="M2 18.5H7" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+              </svg>
+              5 min</span>
+          </div>
+        </div>
+        <div class="quiz">
+          <h1>Economics Quiz</h1>
+          <div>
+            <img src="images/eco.png" alt="" />
+          </div>
+          <p>
+            Take the economic quiz from the Council for Economic Education to test your knowledge of economics. Test
+            your economic literacy now! Take this quiz at Quizzy.com to test your knowledge about science.
+
+          </p>
+          <div class="btn">
+            <!-- <button><i class='bx bxs-caret-right-circle'></i><a href="Quizfeeproject/quiz6q1.html">Play now</a></button> -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal6" ><i class='bx bxs-caret-right-circle '></i>Play now</a></button>
+            <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 22H13C17.9706 22 22 17.9706 22 13C22 8.02944 17.9706 4 13 4C8.36745 4 4.49744 7.50005 4 12"
+                  stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                <path d="M18.5 5.5L20 4M6 4L7.5 5.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                <path
+                  d="M16.5 9L13.5607 11.9393M13.5607 11.9393C13.2892 11.6679 12.9142 11.5 12.5 11.5C11.6716 11.5 11 12.1716 11 13C11 13.8284 11.6716 14.5 12.5 14.5C13.3284 14.5 14 13.8284 14 13C14 12.5858 13.8321 12.2108 13.5607 11.9393Z"
+                  stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                <path d="M12.5 3.5V2M9.5 2H15.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                <path d="M2 15H5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                <path d="M2 18.5H7" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+              </svg>
+              10 min</span>
+          </div>
+        </div>
+      </div>
+    
+
+
+
+
+
+
+      <section class="third" id="section-03">
+        <div class="about">
+          <h1><span>T</span>rending Quizes...</h1>
+        </div>
+        <div class="quizes">
+          <div class="quiz">
+            <h1>Maths Quiz</h1>
+            <div>
+              <img src="images/math-quiz-game.png" alt="" />
+            </div>
+            <p>
+              Math quiz helps us to increase our knowledge. Online math quizzes will take 5 minutes of your time to
+              complete a set of questions on math test quiz.Take this quiz at Quizzy.com to test your knowledge about
+              Maths.
+            </p>
+            <div class="btn">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal7" ><i class='bx bxs-caret-right-circle '></i>Play now</a></button>
+              <!-- <button><i class='bx bxs-caret-right-circle'></i><a href="Quizfeeproject/quiz7q1.html">Play
+                  now</a></button> -->
+              <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2 22H13C17.9706 22 22 17.9706 22 13C22 8.02944 17.9706 4 13 4C8.36745 4 4.49744 7.50005 4 12"
+                    stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                  <path d="M18.5 5.5L20 4M6 4L7.5 5.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                  <path
+                    d="M16.5 9L13.5607 11.9393M13.5607 11.9393C13.2892 11.6679 12.9142 11.5 12.5 11.5C11.6716 11.5 11 12.1716 11 13C11 13.8284 11.6716 14.5 12.5 14.5C13.3284 14.5 14 13.8284 14 13C14 12.5858 13.8321 12.2108 13.5607 11.9393Z"
+                    stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                  <path d="M12.5 3.5V2M9.5 2H15.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                  <path d="M2 15H5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                  <path d="M2 18.5H7" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                </svg>
+                10 min</span>
+            </div>
+          </div>
+          <div class="quiz">
+            <h1>Geography Quiz</h1>
+            <div>
+              <img src="images/th.jpeg" alt="" />
+            </div>
+            <p>
+              Are the Andes Mountains a small mountain range? Are the Alps the longest mountain chain in the world?
+              Scale these questions and test.Take this quiz at Quizzy.com to test your knowledge.
+            </p>
+            <div class="btn">
+              <!-- <button><i class='bx bxs-caret-right-circle'></i><a href="Quizfeeproject/quiz8q1.html">Play
+                  now</a></button> -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal8" ><i class='bx bxs-caret-right-circle '></i>Play now</a></button>
+              <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2 22H13C17.9706 22 22 17.9706 22 13C22 8.02944 17.9706 4 13 4C8.36745 4 4.49744 7.50005 4 12"
+                    stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                  <path d="M18.5 5.5L20 4M6 4L7.5 5.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                  <path
+                    d="M16.5 9L13.5607 11.9393M13.5607 11.9393C13.2892 11.6679 12.9142 11.5 12.5 11.5C11.6716 11.5 11 12.1716 11 13C11 13.8284 11.6716 14.5 12.5 14.5C13.3284 14.5 14 13.8284 14 13C14 12.5858 13.8321 12.2108 13.5607 11.9393Z"
+                    stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                  <path d="M12.5 3.5V2M9.5 2H15.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                  <path d="M2 15H5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                  <path d="M2 18.5H7" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                </svg>
+                20 min</span>
+            </div>
+          </div>
+          <div class="quiz">
+            <h1>Pol.Sc Quiz</h1>
+            <div>
+              <img src="images/landingpage.jpg" alt="" />
+            </div>
+            <p>
+              Test your knowledge on all of Politics and Political Science. Perfect prep for Politics and Political
+              Science quizzes and tests you might have in school.Take this quiz at Quizzy.com to test your knowledge.
+            </p>
+            <div class="btn">
+              <!-- <button><i class='bx bxs-caret-right-circle'></i><a href="Quizfeeproject/quiz9q1.html">Play
+                  now</a></button> -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal9" ><i class='bx bxs-caret-right-circle '></i>Play now</a></button>
+              <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2 22H13C17.9706 22 22 17.9706 22 13C22 8.02944 17.9706 4 13 4C8.36745 4 4.49744 7.50005 4 12"
+                    stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                  <path d="M18.5 5.5L20 4M6 4L7.5 5.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                  <path
+                    d="M16.5 9L13.5607 11.9393M13.5607 11.9393C13.2892 11.6679 12.9142 11.5 12.5 11.5C11.6716 11.5 11 12.1716 11 13C11 13.8284 11.6716 14.5 12.5 14.5C13.3284 14.5 14 13.8284 14 13C14 12.5858 13.8321 12.2108 13.5607 11.9393Z"
+                    stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                  <path d="M12.5 3.5V2M9.5 2H15.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                  <path d="M2 15H5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                  <path d="M2 18.5H7" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                </svg>
+                10 min</span>
+            </div>
+          </div>
+          <div class="quiz">
+            <h1>Literature Quiz</h1>
+            <div>
+              <img src="images/literaturejpeg.jpeg" alt="" />
+            </div>
+            <p>
+              Literature is nothing but books and writings published on a particular subject and have lasting importance
+              . Take this quiz at Quizzy.com to test your knowledge about Literature.
+            </p>
+            <div class="btn">
+              <!-- <button><i class='bx bxs-caret-right-circle'></i><a href="Quizfeeproject/quiz10q1.html">Play
+                  now</a></button> -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal10" ><i class='bx bxs-caret-right-circle '></i>Play now</a></button>
+              <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2 22H13C17.9706 22 22 17.9706 22 13C22 8.02944 17.9706 4 13 4C8.36745 4 4.49744 7.50005 4 12"
+                    stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                  <path d="M18.5 5.5L20 4M6 4L7.5 5.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                  <path
+                    d="M16.5 9L13.5607 11.9393M13.5607 11.9393C13.2892 11.6679 12.9142 11.5 12.5 11.5C11.6716 11.5 11 12.1716 11 13C11 13.8284 11.6716 14.5 12.5 14.5C13.3284 14.5 14 13.8284 14 13C14 12.5858 13.8321 12.2108 13.5607 11.9393Z"
+                    stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                  <path d="M12.5 3.5V2M9.5 2H15.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                  <path d="M2 15H5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                  <path d="M2 18.5H7" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                </svg>
+                30 min</span>
+            </div>
+          </div>
+          <div class="quiz">
+            <h1>Music Quiz</h1>
+            <div>
+              <img src="images/music.jpeg" alt="" />
+            </div>
+            <p>
+              If quizzing is your thing, take a look at our ultimate music quiz. We've rounded up some of the best (and
+              hardest) questions in music.Play this quiz now!
+            <div class="btn">
+              <!-- <button><i class='bx bxs-caret-right-circle'></i><a href="Quizfeeproject/quiz11q1.html">Play
+                  now</a></button> -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal11" ><i class='bx bxs-caret-right-circle '></i>Play now</a></button>
+              <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2 22H13C17.9706 22 22 17.9706 22 13C22 8.02944 17.9706 4 13 4C8.36745 4 4.49744 7.50005 4 12"
+                    stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                  <path d="M18.5 5.5L20 4M6 4L7.5 5.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                  <path
+                    d="M16.5 9L13.5607 11.9393M13.5607 11.9393C13.2892 11.6679 12.9142 11.5 12.5 11.5C11.6716 11.5 11 12.1716 11 13C11 13.8284 11.6716 14.5 12.5 14.5C13.3284 14.5 14 13.8284 14 13C14 12.5858 13.8321 12.2108 13.5607 11.9393Z"
+                    stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                  <path d="M12.5 3.5V2M9.5 2H15.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                  <path d="M2 15H5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                  <path d="M2 18.5H7" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                </svg>
+                10 min</span>
+            </div>
+          </div>
+          <div class="quiz">
+            <h1>Food Quiz</h1>
+            <div>
+              <img src="images/cover-7-850x491.jpg" alt="" />
+            </div>
+            <p>
+              This Quiz Will Reveal Which Indian Food You Are Most Like, Based On Your Zodiac Sign. Your sun signs can
+              reveal a lot, trust me! Take this quiz at Quizzy.com
+
+            </p>
+            <div class="btn">
+              <!-- <button><i class='bx bxs-caret-right-circle'></i><a href="Quizfeeproject/quiz12q1.html">Play
+                  now</a></button> -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal12" ><i class='bx bxs-caret-right-circle '></i>Play now</a></button>
+              <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2 22H13C17.9706 22 22 17.9706 22 13C22 8.02944 17.9706 4 13 4C8.36745 4 4.49744 7.50005 4 12"
+                    stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                  <path d="M18.5 5.5L20 4M6 4L7.5 5.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                  <path
+                    d="M16.5 9L13.5607 11.9393M13.5607 11.9393C13.2892 11.6679 12.9142 11.5 12.5 11.5C11.6716 11.5 11 12.1716 11 13C11 13.8284 11.6716 14.5 12.5 14.5C13.3284 14.5 14 13.8284 14 13C14 12.5858 13.8321 12.2108 13.5607 11.9393Z"
+                    stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                  <path d="M12.5 3.5V2M9.5 2H15.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                  <path d="M2 15H5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                  <path d="M2 18.5H7" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                </svg>
+                15 min</span>
+            </div>
+          </div>
+        </div>
+        
+       <!-- collapse -->
+        <div class="container">
+          <br><br><br><br><br><br>
+          <div class="botn">
+          <Button type="button" class=" more-button" data-toggle="collapse" data-target="#more">See more</Button>
+        </div>
+          <div class="collapse" id="more">  
+  
+            <div class="quizes">
+              <div class="quiz">
+                <h1>Football Quiz</h1>
+                <div>
+                  <img src="images/football.jpeg" alt="" />
+                </div>
+                <p>
+                  Test your football trivia knowledge with this fun and challenging quiz. You'll need to answer 5 questions about football teams, players,history and more.Take this quiz at Quizzy.com
+                </p>
+                <div class="btn">
+                  
+                  <!-- <button ><i class='bx bxs-caret-right-circle '></i><a href="modal-pop.html">Play now</a></button> -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal13" ><i class='bx bxs-caret-right-circle '></i>Play now</a></button>
+      
+                  <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2 22H13C17.9706 22 22 17.9706 22 13C22 8.02944 17.9706 4 13 4C8.36745 4 4.49744 7.50005 4 12"
+                        stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                      <path d="M18.5 5.5L20 4M6 4L7.5 5.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                      <path
+                        d="M16.5 9L13.5607 11.9393M13.5607 11.9393C13.2892 11.6679 12.9142 11.5 12.5 11.5C11.6716 11.5 11 12.1716 11 13C11 13.8284 11.6716 14.5 12.5 14.5C13.3284 14.5 14 13.8284 14 13C14 12.5858 13.8321 12.2108 13.5607 11.9393Z"
+                        stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                      <path d="M12.5 3.5V2M9.5 2H15.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                      <path d="M2 15H5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                      <path d="M2 18.5H7" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                    </svg>
+                    15 min</span>
+                </div>
+              </div>
+              <div class="quiz">
+                <h1>Hockey Quiz</h1>
+                <div>
+                  <img src="images/hockey.jpeg" alt="" />
+                </div>
+                <p>
+                  If you're a true fan , though, here's a quiz to test your hockey knowledge. Hockey, in some form, can be traced back thousands of years to Egypt and Iran . Take this quiz at Quizzy.com
+                </p>
+                <div class="btn">
+      
+                  <!-- <button> <i class='bx bxs-caret-right-circle'></i><a href="Quizfeeproject/quiz2q1.html">Play
+                      now</a></button> -->
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal14" ><i class='bx bxs-caret-right-circle '></i>Play now</a></button>
+                  <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2 22H13C17.9706 22 22 17.9706 22 13C22 8.02944 17.9706 4 13 4C8.36745 4 4.49744 7.50005 4 12"
+                        stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                      <path d="M18.5 5.5L20 4M6 4L7.5 5.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                      <path
+                        d="M16.5 9L13.5607 11.9393M13.5607 11.9393C13.2892 11.6679 12.9142 11.5 12.5 11.5C11.6716 11.5 11 12.1716 11 13C11 13.8284 11.6716 14.5 12.5 14.5C13.3284 14.5 14 13.8284 14 13C14 12.5858 13.8321 12.2108 13.5607 11.9393Z"
+                        stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                      <path d="M12.5 3.5V2M9.5 2H15.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                      <path d="M2 15H5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                      <path d="M2 18.5H7" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                    </svg>
+                    10 min</span>
+                </div>
+              </div>
+              <div class="quiz">
+                <h1>Tennis Quiz</h1>
+                <div>
+                  <img src="images/tennis.jpeg" alt="" />
+                </div>
+                <p>
+                  How is your tennis knowledgen ? Do you know the rules through and through ? Are you up late nights watching every neck-and-neck Grand Slam match ?
+                </p>
+                <div class="btn">
+                  <!-- <button><i class='bx bxs-caret-right-circle'></i><a href="Quizfeeproject/quiz3q1.html">Play now</a></button> -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal15" ><i class='bx bxs-caret-right-circle '></i>Play now</a></button>
+                  <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2 22H13C17.9706 22 22 17.9706 22 13C22 8.02944 17.9706 4 13 4C8.36745 4 4.49744 7.50005 4 12"
+                        stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                      <path d="M18.5 5.5L20 4M6 4L7.5 5.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                      <path
+                        d="M16.5 9L13.5607 11.9393M13.5607 11.9393C13.2892 11.6679 12.9142 11.5 12.5 11.5C11.6716 11.5 11 12.1716 11 13C11 13.8284 11.6716 14.5 12.5 14.5C13.3284 14.5 14 13.8284 14 13C14 12.5858 13.8321 12.2108 13.5607 11.9393Z"
+                        stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                      <path d="M12.5 3.5V2M9.5 2H15.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                      <path d="M2 15H5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                      <path d="M2 18.5H7" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                    </svg>
+                    20 min</span>
+                </div>
+              </div>
+              <div class="quiz">
+                <h1>Badminton Quiz</h1>
+                <div>
+                  <img src="images/badminton.jpg" alt="" />
+                </div>
+                <p>
+                  Which one of these is a rule of Badminton? You must hit the shuttlecock in an upward direction. The players must never touch the net. 
+                </p>
+                <div class="btn">
+                  <!-- <button><i class='bx bxs-caret-right-circle'></i><a href="Quizfeeproject/quiz4q1.html">Play now</a></button> -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal16" ><i class='bx bxs-caret-right-circle '></i>Play now</a></button>
+                  <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2 22H13C17.9706 22 22 17.9706 22 13C22 8.02944 17.9706 4 13 4C8.36745 4 4.49744 7.50005 4 12"
+                        stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                      <path d="M18.5 5.5L20 4M6 4L7.5 5.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                      <path
+                        d="M16.5 9L13.5607 11.9393M13.5607 11.9393C13.2892 11.6679 12.9142 11.5 12.5 11.5C11.6716 11.5 11 12.1716 11 13C11 13.8284 11.6716 14.5 12.5 14.5C13.3284 14.5 14 13.8284 14 13C14 12.5858 13.8321 12.2108 13.5607 11.9393Z"
+                        stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                      <path d="M12.5 3.5V2M9.5 2H15.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                      <path d="M2 15H5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                      <path d="M2 18.5H7" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                    </svg>
+                    20 min</span>
+                </div>
+              </div>
+              <div class="quiz">
+                <h1>G.K Quiz II</h1>
+                <div>
+                  <img src="images/gk2.jpeg" alt="" />
+                </div>
+                <p>
+                  Test your general knowledge trivia with a variety of quizzes on topics from history, science, geography, culture and more. 
+                </p>
+                <div class="btn">
+                  <!-- <button><i class='bx bxs-caret-right-circle'></i><a href="Quizfeeproject/quiz5q1.html">Play now</a></button> -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal17" ><i class='bx bxs-caret-right-circle '></i>Play now</a></button>
+                  <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2 22H13C17.9706 22 22 17.9706 22 13C22 8.02944 17.9706 4 13 4C8.36745 4 4.49744 7.50005 4 12"
+                        stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                      <path d="M18.5 5.5L20 4M6 4L7.5 5.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                      <path
+                        d="M16.5 9L13.5607 11.9393M13.5607 11.9393C13.2892 11.6679 12.9142 11.5 12.5 11.5C11.6716 11.5 11 12.1716 11 13C11 13.8284 11.6716 14.5 12.5 14.5C13.3284 14.5 14 13.8284 14 13C14 12.5858 13.8321 12.2108 13.5607 11.9393Z"
+                        stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                      <path d="M12.5 3.5V2M9.5 2H15.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                      <path d="M2 15H5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                      <path d="M2 18.5H7" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                    </svg>
+                    5 min</span>
+                </div>
+              </div>
+              <div class="quiz">
+                <h1>G>K Quiz III</h1>
+                <div>
+                  <img src="images/gk3.jpg" alt="" />
+                </div>
+                <p>
+                  Test your general knowledge trivia with a variety of quizzes on topics from history, science, geography, culture and more.
+      
+                </p>
+                <div class="btn">
+                  <!-- <button><i class='bx bxs-caret-right-circle'></i><a href="Quizfeeproject/quiz6q1.html">Play now</a></button> -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal18" ><i class='bx bxs-caret-right-circle '></i>Play now</a></button>
+                  <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2 22H13C17.9706 22 22 17.9706 22 13C22 8.02944 17.9706 4 13 4C8.36745 4 4.49744 7.50005 4 12"
+                        stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                      <path d="M18.5 5.5L20 4M6 4L7.5 5.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                      <path
+                        d="M16.5 9L13.5607 11.9393M13.5607 11.9393C13.2892 11.6679 12.9142 11.5 12.5 11.5C11.6716 11.5 11 12.1716 11 13C11 13.8284 11.6716 14.5 12.5 14.5C13.3284 14.5 14 13.8284 14 13C14 12.5858 13.8321 12.2108 13.5607 11.9393Z"
+                        stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                      <path d="M12.5 3.5V2M9.5 2H15.5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                      <path d="M2 15H5" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                      <path d="M2 18.5H7" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                    </svg>
+                    10 min</span>
+                </div>
+              </div>
+  
+            </div>
+  
+  </div>
+
+
+      </section>
+  </main>
+  <footer>
+
+
+
+    <footer class="footer--light">
+      <div class="footer-big">
+        <!-- start .container -->
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-sm-6">
+              <div class="footer-widget">
+                <div class="widget-about">
+
+                  <p>Quizzy.com</p>
+                  <ul class="contact-details">
+                    <li>
+                      <i class="fas fa-phone-alt"></i> Call Us:
+                      <a href="#">+91 99880-75958</a>
+                    </li>
+                    <li>
+                      <i class="fas fa-envelope-open-text"></i>
+                      <a href="#">support@quizzy.com</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Ends: .footer-widget -->
+            </div>
+            <!-- end /.col-lg-4 -->
+            <div class="col-lg-3 col-sm-6">
+              <div class="footer-widget">
+                <div class="footer-menu">
+                  <h4 class="footer-widget-title">Popular Category</h4>
+                  <ul>
+                    <li>
+                      <a href="#section2">Latest quizzes</a>
+                    </li>
+                    <li>
+                      <a href="#section-03">Trending Quizes</a>
+                    </li>
+                    
+                  </ul>
+                </div>
+                <!-- end /.footer-menu -->
+              </div>
+              <!-- Ends: .footer-widget -->
+            </div>
+            <!-- end /.col-lg-3 -->
+
+            <div class="col-lg-3 col-sm-6">
+              <div class="footer-widget">
+                <div class="footer-menu">
+                  <h4 class="footer-widget-title">Our Company</h4>
+                  <ul>
+                    <li>
+                      <a href="#about">About Us</a>
+                    </li>
+                    
+
+
+
+
+                    <li>
+                      <a href="contact.html">Contact Us</a>
+                    </li>
+
+                  </ul>
+                </div>
+                <!-- end /.footer-menu -->
+              </div>
+              <!-- Ends: .footer-widget -->
+            </div>
+            <!-- end /.col-lg-3 -->
+
+            <div class="col-lg-3 col-sm-6">
+              <div class="footer-widget">
+                <div class="footer-menu p-0">
+                  <h4 class="footer-widget-title">Help Support</h4>
+                  <ul>
+                    <li>
+                      <a href="contact.html">Support Forum</a>
+                    </li>
+                    <li>
+                      <a href="terms.html">Terms & Conditions</a>
+                    </li>
+
+                    <li>
+                      <a href="faq.html">FAQs</a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- end /.footer-menu -->
+              </div>
+              <!-- Ends: .footer-widget -->
+            </div>
+            <!-- Ends: .col-lg-3 -->
+
+          </div>
+          <!-- end /.row -->
+        </div>
+        <!-- end /.container -->
+      </div>
+      <!-- end /.footer-big -->
+
+      <div class="mini-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="copyright-text">
+                <p>© 2023
+                  . All rights reserved by
+                  <a href="#">Quizzy Corporations</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+
+  </footer>
+  
+</body>
+</body>
+</html>

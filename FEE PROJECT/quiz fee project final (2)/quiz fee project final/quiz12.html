@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="app">
+        <h1>Food Quiz</h1>
+        <div class="timer" id="timer">Time Left: 10s</div>
+        <div class="quiz">
+            <h2 id="question">Question goes..</h2>
+            <div id="answer-buttons">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div>
+            <button id="next-btn">Next</button>
+        </div>
+    </div>
+    <script>
+        const questions=[
+    {
+        question: "Which country is famous for its traditional dish sushi?",
+        answers:[
+            {text: "Italy", correct: false},
+            {text: "Japan", correct: true},
+            {text: "Mexico", correct: false},
+            {text: "India", correct: false}
+        ]
+    },
+    {
+        question: "What term is used to describe a method of cooking food slowly in liquid over low heat?",
+        answers:[
+            {text: "Grilling", correct: false},
+            {text: "Roasting", correct: false},
+            {text: "Steaming", correct: false},
+            {text: "Braising",correct: true},
+        ]
+    },
+    {
+        question: "Who is known as the 'French Chef' and played a significant role in popularizing French cuisine in the United States through her TV shows and books?",
+        answers:[
+            {text: "Gordon Ramsay", correct: false},
+            {text: "Julia Child", correct: true},
+            {text: "Jamie Oliver", correct: false},
+            {text: "Emeril Lagasse", correct: false}
+        ]
+    },
+    {
+        question: "Which spice, often associated with autumn, is derived from the bark of a tree and is commonly used in both sweet and savory dishes?",
+        answers:[
+            {text: "Cumin", correct: false},
+            {text: "Nutmeg", correct: false},
+            {text: "Cinnamon", correct: true},
+            {text: "Turmeric", correct: false}
+        ]
+    },
+    {
+        question: "What classic French dessert consists of layers of puff pastry and pastry cream, topped with a shiny caramel glaze?",
+        answers:[
+            {text: "Eclair", correct: false},
+            {text: "Mille-Feuille", correct: true},
+            {text: "Tiramisu", correct: false},
+            {text: "Panna Cotta", correct: false}
+        ]
+    }
+];
+const questionElement = document.getElementById("question");
+const answerButtons = document.getElementById("answer-buttons");
+const nextButton = document.getElementById("next-btn");
+
+let currentQuestionIndex = 0;
+let score = 0;
+let timer;
+let timerExpired = false; 
+
+function startQuiz() {
+    currentQuestionIndex = 0;
+    score = 0;
+    nextButton.innerHTML = "Next";
+    showQuestion();
+}
+
+function showQuestion() {
+    resetstate();
+    let currentQuestion = questions[currentQuestionIndex];
+    let questionNo = currentQuestionIndex + 1;
+    questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+
+    const timerDisplay = document.getElementById("timer");
+    timerDisplay.textContent = "Time Left: 10s";
+
+    currentQuestion.answers.forEach((answer) => {
+        const button = document.createElement("button");
+        button.innerHTML = answer.text;
+        button.classList.add("btn");
+        answerButtons.appendChild(button);
+        if (answer.correct) {
+            button.dataset.correct = answer.correct;
+        }
+        button.addEventListener("click", selectAnswer);
+    });
+
+    let timeLeft = 10;
+    timer = setInterval(() => {
+        timeLeft--;
+        timerDisplay.textContent = "Time Left: " + timeLeft + "s";
+
+        if (timeLeft === 0) {
+            timerExpired = true;
+            selectAnswer({ target: null });
+        }
+    }, 1000);
+}
+
+
+
+function resetstate() {
+    nextButton.style.display = "none";
+    while (answerButtons.firstChild) {
+        answerButtons.removeChild(answerButtons.firstChild);
+    }
+    clearTimeout(timer);
+    timerExpired = false; 
+}
+
+function selectAnswer(e) {
+    clearTimeout(timer);
+
+    const selectedButton = e ? e.target : null;
+    const isCorrect = selectedButton && selectedButton.dataset.correct === "true";
+
+    if (isCorrect) {
+        selectedButton.classList.add("correct");
+        score++;
+    } else if (timerExpired) {
+    } else {
+        selectedButton.classList.add("incorrect");
+    }
+
+    Array.from(answerButtons.children).forEach((button) => {
+        if (button.dataset.correct === "true") {
+            button.classList.add("correct");
+        }
+        button.disabled = true;
+    });
+
+    nextButton.style.display = "block";
+}
+
+function showScore() {
+    resetstate();
+    if(score<=3){
+        questionElement.innerHTML = `Oops!!  You scored ${score} out of ${questions.length} marks. Better Luck Next Time`;   
+    }else{
+        questionElement.innerHTML = `Congratulations!! You scored ${score} out of ${questions.length} marks.`;
+    }
+
+    const timerDisplay = document.getElementById("timer");
+    timerDisplay.style.display = "none";
+
+    nextButton.innerHTML = "Exit";
+    nextButton.style.display = "block";
+}
+
+function handleNextButton() {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        showQuestion();
+    } else {
+        showScore();
+    }
+}
+
+nextButton.addEventListener("click", () => {
+    if (currentQuestionIndex < questions.length) {
+        handleNextButton();
+    } else {
+        startQuiz();
+    }
+});
+
+startQuiz();
+
+    </script>
+</body>
+</html>

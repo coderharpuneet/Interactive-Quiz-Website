@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>football Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="app">
+        <h1>football Quiz</h1>
+        <div class="timer" id="timer">Time Left: 10s</div>
+        <div class="quiz">
+            <h2 id="question">Question goes..</h2>
+            <div id="answer-buttons">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div>
+            <button id="next-btn">Next</button>
+        </div>
+    </div>
+    <script>
+        const questions=[
+    {
+        question: "Which country has won the most FIFA World Cup titles?",
+        answers:[
+            {text: "Germany", correct: false},
+            {text: "Brazil", correct: true},
+            {text: "Argentina", correct: false},
+            {text: "Italy", correct: false}
+        ]
+    },
+    {
+        question: "Who is the all-time top scorer in the UEFA Champions League?",
+        answers:[
+            {text: "Lionel Messi", correct: false},
+            {text: "Cristiano Ronaldo", correct: true},
+            {text: "Neymar", correct: false},
+            {text: "Robert Lewandowski",correct: false},
+        ]
+    },
+    {
+        question: "Which English football club is known as 'The Red Devils'?",
+        answers:[
+            {text: "Manchester City", correct: false},
+            {text: "Chelsea", correct: false},
+            {text: "Liverpool", correct: false},
+            {text: "Manchester United", correct: true}
+        ]
+    },
+    {
+        question: "What is the nickname of the French national football team?",
+        answers:[
+            {text: "The Azzurri", correct: false},
+            {text: "Die Mannschaft", correct: false},
+            {text: "Les Bleus", correct: true},
+            {text: "La Furia Roja", correct: false}
+        ]
+    },
+    {
+        question: "Who holds the record for the most goals scored in a single calendar year?",
+        answers:[
+            {text: "Lionel Messi", correct: true},
+            {text: "Cristiano Ronaldo", correct: false},
+            {text: "Pelé", correct: false},
+            {text: "Diego Maradona", correct: false}
+        ]
+    }
+];
+const questionElement = document.getElementById("question");
+const answerButtons = document.getElementById("answer-buttons");
+const nextButton = document.getElementById("next-btn");
+
+let currentQuestionIndex = 0;
+let score = 0;
+let timer;
+let timerExpired = false; 
+
+function startQuiz() {
+    currentQuestionIndex = 0;
+    score = 0;
+    nextButton.innerHTML = "Next";
+    showQuestion();
+}
+
+function showQuestion() {
+    resetstate();
+    let currentQuestion = questions[currentQuestionIndex];
+    let questionNo = currentQuestionIndex + 1;
+    questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+
+    const timerDisplay = document.getElementById("timer");
+    timerDisplay.textContent = "Time Left: 10s";
+
+    currentQuestion.answers.forEach((answer) => {
+        const button = document.createElement("button");
+        button.innerHTML = answer.text;
+        button.classList.add("btn");
+        answerButtons.appendChild(button);
+        if (answer.correct) {
+            button.dataset.correct = answer.correct;
+        }
+        button.addEventListener("click", selectAnswer);
+    });
+
+    let timeLeft = 10;
+    timer = setInterval(() => {
+        timeLeft--;
+        timerDisplay.textContent = "Time Left: " + timeLeft + "s";
+
+        if (timeLeft === 0) {
+            timerExpired = true;
+            selectAnswer({ target: null });
+        }
+    }, 1000);
+}
+
+
+
+function resetstate() {
+    nextButton.style.display = "none";
+    while (answerButtons.firstChild) {
+        answerButtons.removeChild(answerButtons.firstChild);
+    }
+    clearTimeout(timer);
+    timerExpired = false; 
+}
+
+function selectAnswer(e) {
+    clearTimeout(timer);
+
+    const selectedButton = e ? e.target : null;
+    const isCorrect = selectedButton && selectedButton.dataset.correct === "true";
+
+    if (isCorrect) {
+        selectedButton.classList.add("correct");
+        score++;
+    } else if (timerExpired) {
+    } else {
+        selectedButton.classList.add("incorrect");
+    }
+
+    Array.from(answerButtons.children).forEach((button) => {
+        if (button.dataset.correct === "true") {
+            button.classList.add("correct");
+        }
+        button.disabled = true;
+    });
+
+    nextButton.style.display = "block";
+}
+
+function showScore() {
+    resetstate();
+    if(score<=3){
+        questionElement.innerHTML = `Oops!!  You scored ${score} out of ${questions.length} marks. Better Luck Next Time`;   
+    }else{
+        questionElement.innerHTML = `Congratulations!! You scored ${score} out of ${questions.length} marks.`;
+    }
+
+    const timerDisplay = document.getElementById("timer");
+    timerDisplay.style.display = "none";
+
+    nextButton.innerHTML = "Exit";
+    nextButton.style.display = "block";
+}
+
+function handleNextButton() {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        showQuestion();
+    } else {
+        showScore();
+    }
+}
+
+nextButton.addEventListener("click", () => {
+    if (currentQuestionIndex < questions.length) {
+        handleNextButton();
+    } else {
+        startQuiz();
+    }
+});
+
+startQuiz();
+
+    </script>
+</body>
+</html>

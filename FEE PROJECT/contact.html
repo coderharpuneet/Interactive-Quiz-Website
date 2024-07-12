@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact us | Quizzy.com</title>
+  <link rel="icon" href="icons8-contact-us-64.png" type="image/icon type">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+     @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+     
+    body {
+      background-color: #f23e83;
+      font-family: montserrat;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      background-image: url(images/back-login.svg),url(images/back-login-bottom.svg);
+      height: 93vh;
+      background-repeat: no-repeat, no-repeat;
+      background-position: right top, left bottom;
+      
+
+    }
+
+    .container {
+      margin-top: 50px;
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      position: relative;
+      
+  
+   
+    }
+    .row1{
+     
+        width: 50vw;
+        height: 80vh;
+      
+    }
+    .aboutt{
+        margin-top: 20px;
+        width: 25vw;
+        margin-left: -60px;
+        position: relative;
+        margin-right: 50px;
+        color: white;
+        
+    }
+    .aboutt p{
+        font-size: 20px;
+    }
+    div.card{
+        width: 45vw;
+        margin-top: 30px;
+        box-shadow: 0 3px 40px #8b8b8ba3;
+        border: 1px solid #8b8b8ba3;
+    }
+    .aboutt h1{
+     font-size: 60px;
+        padding: 20px 20px 20px 0px;
+        width: 40vw;
+    }
+    .aboutt span{
+        font-size: 25px;
+        color: blue;
+    }
+    
+    .support{
+       
+        color: black;
+       font-weight: 600;
+       text-align: center;
+       
+    }
+    .number{
+      background-color: white;
+      border-radius: 7px;
+    width: 30vw;
+  
+    margin-top: 40px;
+  }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="aboutt">
+        <h1>Let's get in touch</h1>
+        <p>Quizzy cloud platform is a perfect fit for enterprise business needs. We currently support up to 100,000 players per game.
+            We can customize and integrate with your existing environment or applications.</p>
+            <div class="number">  
+
+
+              <p class="support">
+              Please fill the form or contact us at: <br><span>support@quizzy.com</span>
+
+            </div>
+
+
+            </p>
+    </div>
+    <div class="row">
+      <div class="col-md-6 offset-md-3 row1">
+        <div class="card">
+          <div class="card-header">
+            <h2>Contact Us</h2>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

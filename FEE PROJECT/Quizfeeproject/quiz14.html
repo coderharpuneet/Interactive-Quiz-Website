@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hockey Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="app">
+        <h1>Hockey Quiz</h1>
+        <div class="timer" id="timer">Time Left: 10s</div>
+        <div class="quiz">
+            <h2 id="question">Question goes..</h2>
+            <div id="answer-buttons">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div>
+            <button id="next-btn">Next</button>
+        </div>
+    </div>
+    <script>
+        const questions=[
+    {
+        question: "Which NHL team is known for its 'Original Six' status and plays its home games at Madison Square Garden?",
+        answers:[
+            {text: "Toronto Maple Leafs", correct: false},
+            {text: "Montreal Canadiens", correct: false},
+            {text: "New York Rangers", correct: true},
+            {text: "Chicago Blackhawks", correct: false}
+        ]
+    },
+    {
+        question: "In field hockey, how many players are on the field for each team during a standard game?",
+        answers:[
+            {text: "7", correct: false},
+            {text: "9", correct: false},
+            {text: "11", correct: true},
+            {text: "13",correct: false},
+        ]
+    },
+    {
+        question: "Who is widely regarded as one of the greatest ice hockey players of all time and is known as 'The Great One'?",
+        answers:[
+            {text: "Wayne Gretzky", correct: true},
+            {text: "Mario Lemieux", correct: false},
+            {text: "Bobby Orr", correct: false},
+            {text: "Sidney Crosby", correct: false}
+        ]
+    },
+    {
+        question: "In the sport of ice hockey at the Winter Olympics, which country has historically been the most successful, winning the most gold medals?",
+        answers:[
+            {text: "Canada", correct: true},
+            {text: "Russia", correct: false},
+            {text: "Sweden", correct: false},
+            {text: "UK", correct: false}
+        ]
+    },
+    {
+        question: "What term is used to describe the situation in hockey when a team is temporarily down one player due to a penalty?",
+        answers:[
+            {text: "Power Play", correct: true},
+            {text: "Penalty Kill", correct: false},
+            {text: "Facoff", correct: false},
+            {text: "Breakaway", correct: false}
+        ]
+    }
+];
+const questionElement = document.getElementById("question");
+const answerButtons = document.getElementById("answer-buttons");
+const nextButton = document.getElementById("next-btn");
+
+let currentQuestionIndex = 0;
+let score = 0;
+let timer;
+let timerExpired = false; 
+
+function startQuiz() {
+    currentQuestionIndex = 0;
+    score = 0;
+    nextButton.innerHTML = "Next";
+    showQuestion();
+}
+
+function showQuestion() {
+    resetstate();
+    let currentQuestion = questions[currentQuestionIndex];
+    let questionNo = currentQuestionIndex + 1;
+    questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+
+    const timerDisplay = document.getElementById("timer");
+    timerDisplay.textContent = "Time Left: 10s";
+
+    currentQuestion.answers.forEach((answer) => {
+        const button = document.createElement("button");
+        button.innerHTML = answer.text;
+        button.classList.add("btn");
+        answerButtons.appendChild(button);
+        if (answer.correct) {
+            button.dataset.correct = answer.correct;
+        }
+        button.addEventListener("click", selectAnswer);
+    });
+
+    let timeLeft = 10;
+    timer = setInterval(() => {
+        timeLeft--;
+        timerDisplay.textContent = "Time Left: " + timeLeft + "s";
+
+        if (timeLeft === 0) {
+            timerExpired = true;
+            selectAnswer({ target: null });
+        }
+    }, 1000);
+}
+
+
+
+function resetstate() {
+    nextButton.style.display = "none";
+    while (answerButtons.firstChild) {
+        answerButtons.removeChild(answerButtons.firstChild);
+    }
+    clearTimeout(timer);
+    timerExpired = false; 
+}
+
+function selectAnswer(e) {
+    clearTimeout(timer);
+
+    const selectedButton = e ? e.target : null;
+    const isCorrect = selectedButton && selectedButton.dataset.correct === "true";
+
+    if (isCorrect) {
+        selectedButton.classList.add("correct");
+        score++;
+    } else if (timerExpired) {
+    } else {
+        selectedButton.classList.add("incorrect");
+    }
+
+    Array.from(answerButtons.children).forEach((button) => {
+        if (button.dataset.correct === "true") {
+            button.classList.add("correct");
+        }
+        button.disabled = true;
+    });
+
+    nextButton.style.display = "block";
+}
+
+function showScore() {
+    resetstate();
+    if(score<=3){
+        questionElement.innerHTML = `Oops!!  You scored ${score} out of ${questions.length} marrks. Better Luck Next Time`;   
+    }else{
+        questionElement.innerHTML = `Congratulations!! You scored ${score} out of ${questions.length} marks.`;
+    }
+
+    const timerDisplay = document.getElementById("timer");
+    timerDisplay.style.display = "none";
+
+    nextButton.innerHTML = "Play Again";
+    nextButton.style.display = "block";
+    setTimeout(()=>{
+        window.location.href="D:/FEE PROJECT/index.html";
+    }, 6000)
+}
+
+function handleNextButton() {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        showQuestion();
+    } else {
+        showScore();
+    }
+}
+
+nextButton.addEventListener("click", () => {
+    if (currentQuestionIndex < questions.length) {
+        handleNextButton();
+    } else {
+        startQuiz();
+    }
+});
+
+startQuiz();
+
+    </script>
+</body>
+</html>
